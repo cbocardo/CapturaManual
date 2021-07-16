@@ -1,0 +1,194 @@
+{
+    "source": "mockoon:1.14.1",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 15,
+                "name": "Captura Manual",
+                "endpointPrefix": "capturamanual",
+                "latency": 0,
+                "port": 8445,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "post",
+                        "endpoint": "v1/postConsultaRechazo",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n {\r\n   \"vFolio\": \"21193000001\",\r\n   \"vFecRem\": \"20210712\",\r\n   \"vTipRecha\": 5,\r\n   \"vNumNeg\": 65268,\r\n   \"vNomNeg\": \"FARM GUADALAJARA 3    \",\r\n   \"vNumCuenta\": \"547046XXXXXXXXX7   \",\r\n   \"vNatTarj\": \"C \",\r\n   \"vNumAut\": 0,\r\n   \"vTipTxn\": 1,\r\n   \"vBanNeg\": \"B072\",\r\n   \"vEmisor\": \"B003\",\r\n   \"vGiro\": 5912,\r\n   \"vTerminal\": \"0000000077087830\",\r\n   \"vFecOrigDD\": 29,\r\n   \"vFecOrigMM\": 8,\r\n   \"vFecOrigYY\": 2020,\r\n   \"vFecOrigHH\": 17,\r\n   \"vFecOrigMin\": 13,\r\n   \"vFecOrigSS\": 59,\r\n   \"vCodTxn\": 10,\r\n   \"vTipMsj\": 210,\r\n   \"vPEM\": 51,\r\n   \"vRedLog\": \"PAYW\",\r\n   \"vDraftCapt\": 1,\r\n   \"vCodResp\": 55,\r\n   \"mImpTxn\": \"23,800\",\r\n   \"vCdTerm\": \"GUADALAJARA J\",\r\n   \"vVencimiento\": 0,\r\n   \"vMonComp\": 0,\r\n   \"vOrigMsj\": 5,\r\n   \"vOrigResp\": 5,\r\n   \"vFiller1\": \"               \",\r\n   \"vDat1\": \"                              \",\r\n   \"vDat2\": \"                              \",\r\n   \"vDat3\": \"                              \",\r\n   \"vNumReferencia\": \"\",\r\n   \"vPagDif\": \"      \",\r\n   \"vBanderaCash\": \" \",\r\n   \"mImporteCash\": 0,\r\n   \"vMedComunicacion\": \"\",\r\n   \"vRRN\": \"798518998375\",\r\n   \"vUCAF\": \" \",\r\n   \"v3DSec\": \"\",\r\n   \"vCodEci\": 0,\r\n   \"vTokenQ2\": 3,\r\n   \"vTokenC4\": 0,\r\n   \"vDest\": \"PAYW\",\r\n   \"vCVV2\": 0,\r\n   \"vLote\": \"      \",\r\n   \"vFiller2\": \"                    \",\r\n   \"iEmisor\": null,\r\n   \"vRegLlave\": null\r\n },\r\n {\r\n   \"vFolio\": \"21193000002\",\r\n   \"vFecRem\": \"20210712\",\r\n   \"vTipRecha\": 6,\r\n   \"vNumNeg\": 65268,\r\n   \"vNomNeg\": \"FARM GUADALAJARA 3    \",\r\n   \"vNumCuenta\": \"547074XXXXXXXXX9   \",\r\n   \"vNatTarj\": \"C \",\r\n   \"vNumAut\": 0,\r\n   \"vTipTxn\": 1,\r\n   \"vBanNeg\": \"B072\",\r\n   \"vEmisor\": \"B021\",\r\n   \"vGiro\": 5912,\r\n   \"vTerminal\": \"0000000075224929\",\r\n   \"vFecOrigDD\": 29,\r\n   \"vFecOrigMM\": 8,\r\n   \"vFecOrigYY\": 2020,\r\n   \"vFecOrigHH\": 14,\r\n   \"vFecOrigMin\": 31,\r\n   \"vFecOrigSS\": 37,\r\n   \"vCodTxn\": 10,\r\n   \"vTipMsj\": 210,\r\n   \"vPEM\": 51,\r\n   \"vRedLog\": \"PAYW\",\r\n   \"vDraftCapt\": 1,\r\n   \"vCodResp\": 100,\r\n   \"mImpTxn\": \"185,280\",\r\n   \"vCdTerm\": \"GUADALAJARA J\",\r\n   \"vVencimiento\": 0,\r\n   \"vMonComp\": 0,\r\n   \"vOrigMsj\": 5,\r\n   \"vOrigResp\": 5,\r\n   \"vFiller1\": \"               \",\r\n   \"vDat1\": \"                              \",\r\n   \"vDat2\": \"                              \",\r\n   \"vDat3\": \"                              \",\r\n   \"vNumReferencia\": \"                       \",\r\n   \"vPagDif\": \"      \",\r\n   \"vBanderaCash\": \" \",\r\n   \"mImporteCash\": 0,\r\n   \"vMedComunicacion\": \"               \",\r\n   \"vRRN\": 798518932138,\r\n   \"vUCAF\": \" \",\r\n   \"v3DSec\": \"                                        \",\r\n   \"vCodEci\": 0,\r\n   \"vTokenQ2\": 3,\r\n   \"vTokenC4\": 0,\r\n   \"vDest\": \"PAYW\",\r\n   \"vCVV2\": 0,\r\n   \"vLote\": \"      \",\r\n   \"vFiller2\": \"                    \",\r\n   \"iEmisor\": null,\r\n   \"vRegLlave\": null\r\n },\r\n {\r\n   \"vFolio\": \"21193000003\",\r\n   \"vFecRem\": \"20210712\",\r\n   \"vTipRecha\": 7,\r\n   \"vNumNeg\": 76748,\r\n   \"vNomNeg\": \"CLIP MX BEER N BURGUE \",\r\n   \"vNumCuenta\": \"548236XXXXXXXXX3   \",\r\n   \"vNatTarj\": \"C \",\r\n   \"vNumAut\": 0,\r\n   \"vTipTxn\": 1,\r\n   \"vBanNeg\": \"B072\",\r\n   \"vEmisor\": \"EGLO\",\r\n   \"vGiro\": 5399,\r\n   \"vTerminal\": \"bKYXEGyfY0S6g4rK\",\r\n   \"vFecOrigDD\": 28,\r\n   \"vFecOrigMM\": 8,\r\n   \"vFecOrigYY\": 2020,\r\n   \"vFecOrigHH\": 23,\r\n   \"vFecOrigMin\": 0,\r\n   \"vFecOrigSS\": 33,\r\n   \"vCodTxn\": 10,\r\n   \"vTipMsj\": 210,\r\n   \"vPEM\": 51,\r\n   \"vRedLog\": \"AGRS\",\r\n   \"vDraftCapt\": 1,\r\n   \"vCodResp\": 67,\r\n   \"mImpTxn\": \"42,400\",\r\n   \"vCdTerm\": \"CUERNAVACA   \",\r\n   \"vVencimiento\": 0,\r\n   \"vMonComp\": 0,\r\n   \"vOrigMsj\": 5,\r\n   \"vOrigResp\": 3,\r\n   \"vFiller1\": \"               \",\r\n   \"vDat1\": \"                              \",\r\n   \"vDat2\": \"                              \",\r\n   \"vDat3\": \"                              \",\r\n   \"vNumReferencia\": \"                       \",\r\n   \"vPagDif\": \"      \",\r\n   \"vBanderaCash\": \" \",\r\n   \"mImporteCash\": 0,\r\n   \"vMedComunicacion\": \"               \",\r\n   \"vRRN\": 374308130931,\r\n   \"vUCAF\": \" \",\r\n   \"v3DSec\": \"                                        \",\r\n   \"vCodEci\": 0,\r\n   \"vTokenQ2\": 3,\r\n   \"vTokenC4\": 0,\r\n   \"vDest\": \"AGRS\",\r\n   \"vCVV2\": 0,\r\n   \"vLote\": \"      \",\r\n   \"vFiller2\": \"                    \",\r\n   \"iEmisor\": null,\r\n   \"vRegLlave\": null\r\n }\r\n]",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "v1/getConsultaCatalogos/:pviAdquirente/:pvCodigoCatalogo",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n {\r\n   \"iAccion\" : \"1\",\r\n   \"vDescripcion\" : \"SASI-Si Abono, Si Intercambio\"\r\n },\r\n {\r\n   \"iAccion\" : \"2\",\r\n   \"vDescripcion\" : \"NASI-No Abono, Si Intercambio\"\r\n }\r\n]",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "v1/getfuentepapel/:fechaArribo",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n {\r\n   \"Codigotiporegistro\": \"stringCodigotiporegistro\",\r\n   \"NumeroCuenta\": \"stringNumeroCuenta\",\r\n   \"ExtensionCta\": \"stringExtensionCta\",\r\n   \"NumeroNegocio\": \"stringNumeroNegocio\",\r\n   \"tipotransaccion\": \"stringtipotransaccion\",\r\n   \"Adquirente\": \"stringAdquirente\",\r\n   \"Importetransaccion\": \"stringImportetransaccion\",\r\n   \"Importeconsumo\": \"stringImporteconsumo\",\r\n   \"ReferenciaBanco\": \"stringReferenciaBanco\",\r\n   \"Terminal\": \"stringTerminal\",\r\n   \"PEM\": \"stringPEM\",\r\n   \"N£meroAutorizacion\": \"stringN£meroAutorizacion\",\r\n   \"Fechatransaccion\": \"stringFechatransaccion\",\r\n   \"ECI\": \"stringECI\",\r\n   \"MedioAcceso\": \"stringMedioAcceso\",\r\n   \"Track2\": \"stringTrack2\",\r\n   \"CVV2CV\": \"stringCVV2CV\",\r\n   \"UCAF\": \"stringUCAF\",\r\n   \"pagosdiferidos\": \"stringpagosdiferidos\",\r\n   \"pagointerbancario\": \"stringpagointerbancario\",\r\n   \"CapTerminal\": \"stringCapTerminal\",\r\n   \"CodigoServicio\": \"stringCodigoServicio\"\r\n }\r\n]",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "v1/getfuentepapel/:fechaArribo/:NumAutoriza",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n {\r\n   \"Codigotiporegistro\": \"stringCodigotiporegistro\",\r\n   \"NumeroCuenta\": \"stringNumeroCuenta\",\r\n   \"ExtensionCta\": \"stringExtensionCta\",\r\n   \"NumeroNegocio\": \"stringNumeroNegocio\",\r\n   \"tipotransaccion\": \"stringtipotransaccion\",\r\n   \"Adquirente\": \"stringAdquirente\",\r\n   \"Importetransaccion\": \"stringImportetransaccion\",\r\n   \"Importeconsumo\": \"stringImporteconsumo\",\r\n   \"ReferenciaBanco\": \"stringReferenciaBanco\",\r\n   \"Terminal\": \"stringTerminal\",\r\n   \"PEM\": \"stringPEM\",\r\n   \"N£meroAutorizacion\": \"stringN£meroAutorizacion\",\r\n   \"Fechatransaccion\": \"stringFechatransaccion\",\r\n   \"ECI\": \"stringECI\",\r\n   \"MedioAcceso\": \"stringMedioAcceso\",\r\n   \"Track2\": \"stringTrack2\",\r\n   \"CVV2CV\": \"stringCVV2CV\",\r\n   \"UCAF\": \"stringUCAF\",\r\n   \"pagosdiferidos\": \"stringpagosdiferidos\",\r\n   \"pagointerbancario\": \"stringpagointerbancario\",\r\n   \"CapTerminal\": \"stringCapTerminal\",\r\n   \"CodigoServicio\": \"stringCodigoServicio\"\r\n }\r\n]",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "v1/getfuentepapel/:fechaArribo/:NumAutoriza/:codigoTransaccion",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "[\r\n {\r\n   \"Codigotiporegistro\": \"stringCodigotiporegistro\",\r\n   \"NumeroCuenta\": \"stringNumeroCuenta\",\r\n   \"ExtensionCta\": \"stringExtensionCta\",\r\n   \"NumeroNegocio\": \"stringNumeroNegocio\",\r\n   \"tipotransaccion\": \"stringtipotransaccion\",\r\n   \"Adquirente\": \"stringAdquirente\",\r\n   \"Importetransaccion\": \"stringImportetransaccion\",\r\n   \"Importeconsumo\": \"stringImporteconsumo\",\r\n   \"ReferenciaBanco\": \"stringReferenciaBanco\",\r\n   \"Terminal\": \"stringTerminal\",\r\n   \"PEM\": \"stringPEM\",\r\n   \"N£meroAutorizacion\": \"stringN£meroAutorizacion\",\r\n   \"Fechatransaccion\": \"stringFechatransaccion\",\r\n   \"ECI\": \"stringECI\",\r\n   \"MedioAcceso\": \"stringMedioAcceso\",\r\n   \"Track2\": \"stringTrack2\",\r\n   \"CVV2CV\": \"stringCVV2CV\",\r\n   \"UCAF\": \"stringUCAF\",\r\n   \"pagosdiferidos\": \"stringpagosdiferidos\",\r\n   \"pagointerbancario\": \"stringpagointerbancario\",\r\n   \"CapTerminal\": \"stringCapTerminal\",\r\n   \"CodigoServicio\": \"stringCodigoServicio\"\r\n }\r\n]",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "proxyRemovePrefix": false,
+                "https": false,
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Access-Control-Allow-Origin",
+                        "value": "*"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Methods",
+                        "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                    },
+                    {
+                        "key": "Access-Control-Allow-Headers",
+                        "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
