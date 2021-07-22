@@ -18,10 +18,12 @@
       "more": false
     },
     {
-      "label": "Revisión de Rechazos Nacional",
-      "path": "revisionrechazosnacional",
+      "label": "Gestión de Rechazos Nacional",
+      "path": "gestionrechazosnacional",
       "more": true
     }
+  
+  
   
   
   ]

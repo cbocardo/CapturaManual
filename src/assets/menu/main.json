@@ -4,8 +4,18 @@
 
 
     {
-      "label": "Revisión de Rechazos Nacional",
-      "path": "revisionrechazosnacional",
+      "label": "Gestión de Rechazos Emisor",
+      "path": "gestionrechazos",
+      "more": true
+    },
+    {
+      "label": "Gestión de Rechazos Adquirente",
+      "path": "gestionrechazosadquirente",
+      "more": true
+    },
+     {
+      "label": "Conciliación de Pagos",
+      "path": "reportegrrnc",
       "more": true
     }
      ]

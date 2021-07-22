@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule ,ChangeDetectorRef } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AquirerService} from './service/aquirer.service';
@@ -20,39 +20,85 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatNativeDateModule} from '@angular/material';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material';
-
+import { OverlayModule } from "@angular/cdk/overlay";
+import {DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
+import { AppDateAdapter, APP_DATE_FORMATS } from 'src/app/page/gestionrechazo/rechazos-lotes/format-datepicker';
 import { SideBarComponent } from './component/side-bar/side-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './component/button/button.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MaterialModule } from './material.module';
+import { HomeComponent } from './page/home/home.component';
+import { GestionCasosComponent } from './page/recuperacionPagares/gestion-casos/gestion-casos.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { AdquirienteComponent } from './page/adquiriente/adquiriente.component';
+import { ConsultaVentaComponent } from './page/consulta-venta/consulta-venta.component';
+import { ConfirmationReportComponent ,venta ,cargoabono,reinyeccion} from './page/confirmation-report/confirmation-report.component';
 import { HomeAmexComponent } from './page/home-amex/home-amex.component';
-import { RechazosBanorteComponent } from './page/fuentepapel/rechazos-banorte/rechazos-banorte.component';
-import { LoginComponent } from './page/login/login.component';
-import { DetallerechazosModalComponent } from './page/detallerechazos-modal/detallerechazos-modal.component';
-import { RechazosComponent } from './page/rechazos/rechazos.component';
-import { CapturamanualComponent } from './page/capturamanual/capturamanual.component';
-import { ModificacionRechazoModalComponent } from './page/modificacion-rechazo-modal/modificacion-rechazo-modal.component';
-import { ModalOpcionesComponent } from './page/modal-opciones/modal-opciones.component';
-import { ModalDetalleComponent } from './page/modal-detalle/modal-detalle.component';
-
+import { VistaConcentradoComponent } from './page/vista-concentrado/vista-concentrado.component';
+import { ReporteSumaryComponent } from './page/reportegrrnc/reporte-sumary/reporte-sumary.component';
+import { ReporteTrailerComponent } from './page/reportegrrnc/reporte-trailer/reporte-trailer.component';
+import { ReporteTransactnComponent } from './page/reportegrrnc/reporte-transactn/reporte-transactn.component';
+import { ReporteTxnpricingComponent } from './page/reportegrrnc/reporte-txnpricing/reporte-txnpricing.component';
+import { ReporteSubmissionComponent } from './page/reportegrrnc/reporte-submission/reporte-submission.component';
+import { VistaModalComponent } from './page/vista-modal/vista-modal.component';
+import { ReporteChargebackComponent } from './page/reportegrrnc/reporte-chargeback/reporte-chargeback.component';
+import { ReporteGeneralComponent } from './page/reportegrrnc/reporte-general/reporte-general.component';
+import { ReporteAdjustmentComponent } from './page/reportegrrnc/reporte-adjustment/reporte-adjustment.component';
+import { RechazoSintaxisComponent, obtenerrechazo } from './page/rechazo-sintaxis/rechazo-sintaxis.component';
+import { DetallePagosComponent } from './page/reportegrrnc/detalle-pagos/detalle-pagos.component';
+import { ConsolidadoPagosComponent } from './page/reportegrrnc/consolidado-pagos/consolidado-pagos.component';
+import { RechazosLotesComponent } from './page/gestionrechazo/rechazos-lotes/rechazos-lotes.component';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { RechazosComponent } from './page/revisionrechazosnacional/rechazos/rechazos.component';
+import { FuentepapelComponent } from './page/revisionrechazosnacional/fuentepapel/fuentepapel.component';
+import { ConsultaarchivoComponent } from './page/revisionrechazosnacional/consultaarchivo/consultaarchivo.component';
+import { CapturamanualComponent } from './page/revisionrechazosnacional/capturamanual/capturamanual.component';
+import { DetallerechazosModalComponent } from './page/revisionrechazosnacional/detallerechazos-modal/detallerechazos-modal.component';
+import { ModalDetalleComponent } from './page/revisionrechazosnacional/modal-detalle/modal-detalle.component';
+import { ModalOpcionesComponent } from './page/revisionrechazosnacional/modal-opciones/modal-opciones.component';
+import { ModificacionRechazoModalComponent } from './page/revisionrechazosnacional/modificacion-rechazo-modal/modificacion-rechazo-modal.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     SideBarComponent,
-    ButtonComponent, 
-    FooterComponent,  
-    HomeAmexComponent,   
-    RechazosBanorteComponent,
-    LoginComponent,
-    DetallerechazosModalComponent,    
+    ButtonComponent,
+    HomeComponent,
+    GestionCasosComponent,
+    FooterComponent,
+    AdquirienteComponent,
+    ConsultaVentaComponent,
+    ConfirmationReportComponent,
+    cargoabono,
+    reinyeccion,
+    venta,
+    obtenerrechazo,
+
+   
+    HomeAmexComponent,
+    VistaConcentradoComponent,
+    ReporteSumaryComponent,
+    ReporteTrailerComponent,
+    ReporteTransactnComponent,
+    ReporteTxnpricingComponent,
+    ReporteSubmissionComponent,
+    VistaModalComponent,
+    ReporteChargebackComponent,
+    ReporteGeneralComponent,
+    ReporteAdjustmentComponent,
+    RechazoSintaxisComponent,
+    DetallePagosComponent,
+    ConsolidadoPagosComponent,
+    RechazosLotesComponent,
     RechazosComponent,
+    FuentepapelComponent,
+    ConsultaarchivoComponent,
     CapturamanualComponent,
-    ModificacionRechazoModalComponent,    
+    DetallerechazosModalComponent,
+    ModalDetalleComponent,
     ModalOpcionesComponent,
-    ModalDetalleComponent  
+    ModificacionRechazoModalComponent,
     
   ],
   imports: [
@@ -76,16 +122,17 @@ import { ModalDetalleComponent } from './page/modal-detalle/modal-detalle.compon
     MatDialogModule,
     MatSortModule,
     MaterialModule,
-    CommonModule,
-    MatCheckboxModule
+    OverlayModule,
+    MatCheckboxModule,
+
+    CommonModule
   ],
 
-  providers: [AquirerService,DatePipe],
- entryComponents: [DetallerechazosModalComponent,
-                   ModificacionRechazoModalComponent,                  
-                   ModalOpcionesComponent,
-                   ModalDetalleComponent              
-                  ],
+  providers: [AquirerService,DatePipe,ConfirmationReportComponent],
+ entryComponents: [venta,cargoabono,reinyeccion,obtenerrechazo,DetallerechazosModalComponent,
+  ModificacionRechazoModalComponent,                  
+  ModalOpcionesComponent,
+  ModalDetalleComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
