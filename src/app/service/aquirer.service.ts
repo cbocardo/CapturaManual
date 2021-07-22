@@ -8,6 +8,7 @@ import { rechazonacional } from '../model/rechazonacional.model';
 import { fuentepapelParam } from '../model/fuentepapelParam.model';
 import { detallerechazoNac } from '../model/detallerechazoNac.model';
 import { RechazoParams } from '../model/RechazoParams.model';
+import { LCatalogosDTO } from '../model/lCatalogosDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -31,16 +32,22 @@ export class AquirerService {
     let headers = new HttpHeaders();
 
     headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
-    return this.http.post<any>(this.baseUrl + 'postConsultaRechazo/', rechazoParams, { headers });
+    return this.http.post<any>(this.baseUrl + 'consulta/rechazo/', rechazoParams, { headers });
+  }
+  postConsultaRechazoFolio(rechazoParams: RechazoParams): Observable<any> {
+    let headers = new HttpHeaders();
+
+    headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
+    return this.http.post<any>(this.baseUrl + 'consulta/rechazo/', rechazoParams, { headers });
   }
 
 
-  getFuentepapelDetalle(fuentepapelParam : fuentepapelParam): Observable<ApiResponse[]> {
+  getFuentepapelDetalle(fuentepapelParam: fuentepapelParam): Observable<ApiResponse[]> {
     let headers = new HttpHeaders();
 
     headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
     return this.http.get<ApiResponse[]>(this.baseUrl + 'getfuentepapel/' +
-    fuentepapelParam.fechaArribo + '/' + fuentepapelParam.NumAutoriza + '/' + fuentepapelParam.codigoTransaccion, { headers });
+      fuentepapelParam.fechaArribo + '/' + fuentepapelParam.NumAutoriza + '/' + fuentepapelParam.codigoTransaccion, { headers });
   }
 
   getFuentepapel(): Observable<ApiResponse[]> {
@@ -55,5 +62,23 @@ export class AquirerService {
     headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
     return this.http.get<ApiResponse[]>(this.baseUrl + 'getConsultaCatalogos/3/2', { headers });
   }
-  
+  getCatalogosAcciones(): Observable<LCatalogosDTO[]> {
+    let headers = new HttpHeaders();
+
+    headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
+    return this.http.get<LCatalogosDTO[]>(this.baseUrl + '/catalogos/72/4', { headers });
+  }
+  getCatalogosCodigosTxn(): Observable<LCatalogosDTO[]> {
+    let headers = new HttpHeaders();
+
+    headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
+    return this.http.get<LCatalogosDTO[]>(this.baseUrl + '/catalogos/72/3', { headers });
+  }
+  getCatalogosCodigosRej(): Observable<LCatalogosDTO[]> {
+    let headers = new HttpHeaders();
+
+    headers = headers.set('accept', 'application/json').set('AUTH_API_KEY', 'abcd123456');
+    return this.http.get<LCatalogosDTO[]>(this.baseUrl + '/catalogos/72/2', { headers });
+  }
+
 }

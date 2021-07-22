@@ -16,6 +16,7 @@ import { DetallerechazosModalComponent } from 'src/app/page/detallerechazos-moda
 import { ModalOpcionesComponent } from 'src/app/page/modal-opciones/modal-opciones.component';
 import { RechazoParams } from 'src/app/model/RechazoParams.model';
 import { ModalDetalleComponent } from '../modal-detalle/modal-detalle.component';
+import { LCatalogosDTO } from 'src/app/model/lCatalogosDTO';
 
 @Component({
   selector: 'app-rechazos',
@@ -32,6 +33,8 @@ export class RechazosComponent implements OnInit {
   dataRS: any;
   DetalleSintaxis: any;
   folio: String;
+  _codtxn: LCatalogosDTO[];
+  _codRej: LCatalogosDTO[];
   _rechazosParam: RechazoParams;
   constructor(
     private formBuilder: FormBuilder,
@@ -48,6 +51,34 @@ export class RechazosComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   ngOnInit() {
 
+
+    this.AquirerService.getCatalogosCodigosTxn().subscribe(
+      data => {
+        this._codtxn = data;
+      }, error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al obtener datos',
+          text: 'Favor de reportarlo al administrador del sistema'
+        })
+
+      });
+
+
+    this.AquirerService.getCatalogosCodigosRej().subscribe(
+      data => {
+        this._codRej = data;
+      }, error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al obtener datos',
+          text: 'Favor de reportarlo al administrador del sistema'
+        })
+
+      });
+
+
+
     this.Rechazo = this.formBuilder.group({
       pvFechaIni: [''],
       pvFechaFin: [''],
@@ -55,7 +86,8 @@ export class RechazosComponent implements OnInit {
       pvCodRechazo: ['', Validators.required]
     });
 
-    this.dataRechazoNac =  new MatTableDataSource(JSON.parse(localStorage.getItem('dataRechazoNac')));
+
+    this.dataRechazoNac = new MatTableDataSource(JSON.parse(localStorage.getItem('dataRechazoNac')));
 
   }
   // openDialog(element): void {
@@ -77,9 +109,9 @@ export class RechazosComponent implements OnInit {
     var fechaF = !this.Rechazo.value.pvFechaFin ? this.fechaactual.value : this.Rechazo.value.pvFechaFin;
     this.Rechazo.value.pvFechaIni = this.datePipe.transform(fechaI, 'yyyyMMdd');
     this.Rechazo.value.pvFechaFin = this.datePipe.transform(fechaF, 'yyyyMMdd');
-    this._rechazosParam = new RechazoParams(this.Rechazo.value.pvFechaIni, this.Rechazo.value.pvFechaFin, this.Rechazo.value.pvCodTransaccion, this.Rechazo.value.pvCodRechazo)
+    this._rechazosParam = new RechazoParams(this.Rechazo.value.pvFechaIni, this.Rechazo.value.pvFechaFin, this.Rechazo.value.pvCodTransaccion, this.Rechazo.value.pvCodRechazo, vFolio)
     this.dialog.open(ModalDetalleComponent, {
-      disableClose: false, width: '1800px', data: vFolio
+      disableClose: false, width: 'auto', data: this._rechazosParam
     });
   }
 

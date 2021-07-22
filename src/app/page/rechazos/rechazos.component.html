@@ -27,8 +27,7 @@
           <mat-form-field appearance="fill">
             <mat-label>Código de Transacción</mat-label>
             <mat-select formControlName="pvCodTransaccion" multiple>
-              <mat-option value="1">Código de Transacción 1</mat-option>
-              <mat-option value="2">Código de Transacción 2</mat-option>
+              <mat-option  *ngFor="let codigo of _codtxn" [value]="codigo.iCodigo">{{codigo.vDescripcion}}</mat-option>
             </mat-select>
           </mat-form-field>
         </td>
@@ -36,8 +35,7 @@
           <mat-form-field appearance="fill">
             <mat-label>Código de Rechazo</mat-label>
             <mat-select formControlName="pvCodRechazo" multiple>
-              <mat-option value="1">Código de Rechazo 1</mat-option>
-              <mat-option value="2">Código de Rechazo 2</mat-option>
+              <mat-option  *ngFor="let codigo of _codRej" [value]="codigo.iCodigo">{{codigo.vDescripcion}}</mat-option>
             </mat-select>
           </mat-form-field>
         </td>

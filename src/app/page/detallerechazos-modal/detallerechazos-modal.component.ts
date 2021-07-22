@@ -26,14 +26,14 @@ export class DetallerechazosModalComponent implements OnInit {
   public detalleRechazo: FormGroup;
   public rechazoMO: detallerechazoNac;
   dataFuentePapel = new MatTableDataSource();
-  public accion : String;
+  public accion: String;
   constructor(
     public AquirerService: AquirerService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder
 
   ) { }
-  archivoftepColumns: string[] = ['Comparar','codregistro', 'vNoCuenta', 'vNumNeg', 'tipotrans'
+  archivoftepColumns: string[] = ['Comparar', 'codregistro', 'vNoCuenta', 'vNumNeg', 'tipotrans'
     , 'importe', 'referencia'];
 
   applyFilter(filterValue: string) {
@@ -41,82 +41,82 @@ export class DetallerechazosModalComponent implements OnInit {
   }
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   public ngOnInit(): void {
-    
-    this.accion = 'SASI-Si Abono, Si Intercambio';
-    
-    // this.AquirerService.getCatalogos().subscribe(
-    //   data => {
-    //     this.accion = data.iDEscripcion;
-    //     }, error => {
-    //       Swal.fire({
-    //         icon: 'error',
-    //         title: 'Error al obtener datos',
-    //         text: 'Favor de reportarlo al administrador del sistema'
-    //       })
-      
-    //   });
 
-   
+    //this.accion = 'SASI-Si Abono, Si Intercambio';
+
+    this.AquirerService.getCatalogosAcciones().subscribe(
+      data => {
+        this.accion = data[1].vDescripcion;
+      }, error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error al obtener datos',
+          text: 'Favor de reportarlo al administrador del sistema'
+        })
+
+      });
+
+
 
     this.detalleRechazo = this.formBuilder.group({
-      vFolio          : [''],
-      vFecRem         : [''],
-      vTipRecha       : [''],
-      vNumNeg         : [''],
-      vNomNeg         : [''],
-      vNumCuenta      : [''],
-      vNatTarj        : [''],
-      vNumAut         : [''],
-      vTipTxn         : [''],
-      vBanNeg         : [''],
-      vEmisor         : [''],
-      vGiro           : [''],
-      vTerminal       : [''],
-      vFecOrigDD      : [''],
-      vFecOrigMM      : [''],
-      vFecOrigYY      : [''],
-      vFecOrigHH      : [''],
-      vFecOrigMin     : [''],
-      vFecOrigSS      : [''],
-      vCodTxn         : [''],
-      vTipMsj         : [''],
-      vPEM            : [''],
-      vRedLog         : [''],
-      vDraftCapt      : [''],
-      vCodResp        : [''],
-      mImpTxn         : [''],
-      vCdTerm         : [''],
-      vVencimiento    : [''],
-      vMonComp        : [''],
-      vOrigMsj        : [''],
-      vOrigResp       : [''],
-      vFiller1        : [''],
-      vDat1           : [''],
-      vDat2           : [''],
-      vDat3           : [''],
-      vNumReferencia  : [''],
-      vPagDif         : [''],
-      vBanderaCash    : [''],
-      mImporteCash    : [''],
-      vMedComunicacion: [''],  
-      vRRN            : [''],
-      vUCAF           : [''],
-      v3DSec          : [''],
-      vCodEci         : [''],
-      vTokenQ2        : [''],
-      vTokenC4        : [''],
-      vDest           : [''],
-      vCVV2           : [''],
-      vLote           : [''],
-      vFiller2        : [''],
-      iEmisor         : [''],
-      vRegLlave       : ['']
+      vFolio: [''],
+      vFecRem: [''],
+      vTipRecha: [''],
+      vNumNeg: [''],
+      vNomNeg: [''],
+      vNumCuenta: [''],
+      vNatTarj: [''],
+      vNumAut: [''],
+      vTipTxn: [''],
+      vBanNeg: [''],
+      vEmisor: [''],
+      vGiro: [''],
+      vTerminal: [''],
+      vFecOrigDD: [''],
+      vFecOrigMM: [''],
+      vFecOrigYY: [''],
+      vFecOrigHH: [''],
+      vFecOrigMin: [''],
+      vFecOrigSS: [''],
+      vCodTxn: [''],
+      vTipMsj: [''],
+      vPEM: [''],
+      vRedLog: [''],
+      vDraftCapt: [''],
+      vCodResp: [''],
+      mImpTxn: [''],
+      vCdTerm: [''],
+      vVencimiento: [''],
+      vMonComp: [''],
+      vOrigMsj: [''],
+      vOrigResp: [''],
+      vFiller1: [''],
+      vDat1: [''],
+      vDat2: [''],
+      vDat3: [''],
+      vNumReferencia: [''],
+      vPagDif: [''],
+      vBanderaCash: [''],
+      mImporteCash: [''],
+      vMedComunicacion: [''],
+      vRRN: [''],
+      vUCAF: [''],
+      v3DSec: [''],
+      vCodEci: [''],
+      vTokenQ2: [''],
+      vTokenC4: [''],
+      vDest: [''],
+      vCVV2: [''],
+      vLote: [''],
+      vFiller2: [''],
+      iEmisor: [''],
+      vRegLlave: ['']
 
     });
-    
+
     //    this._fuentepapelParam = new fuentepapelParam('2424223', '42343234', '432424234');
     this.route.params.subscribe(params => this.AquirerService.getFuentepapel()
       .subscribe(
@@ -142,30 +142,30 @@ export class DetallerechazosModalComponent implements OnInit {
         }));
 
 
-    this.route.params.subscribe(params => 
-      
+    this.route.params.subscribe(params =>
+
       this.AquirerService.postConsultaRechazo(this._rechazoParam)
-      .subscribe(
-        data => {
+        .subscribe(
+          data => {
 
-          if (!data) {
+            if (!data) {
+              Swal.fire({
+                icon: 'info',
+                text: 'No hay datos!'
+              })
+            } else {
+              this.detalleRechazo.setValue(data);
+            }
+
+          },
+          error => {
             Swal.fire({
-              icon: 'info',
-              text: 'No hay datos!'
+              icon: 'error',
+              title: 'Error al obtener el detalle del rechazo',
+              text: 'Favor de reportarlo al administrador del sistema'
             })
-          } else {
-            this.detalleRechazo.setValue(data);
-          }
 
-        },
-        error => {
-          Swal.fire({
-            icon: 'error',
-            title: 'Error al obtener el detalle del rechazo',
-            text: 'Favor de reportarlo al administrador del sistema'
-          })
-
-        }));
+          }));
 
   }
 
